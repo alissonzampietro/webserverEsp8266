@@ -74,3 +74,11 @@ ul{
 .btn{
 	clear:both !important;
 }
+
+#ip{
+	width: 100%;
+}
+
+.erro{
+	border-color:#f00;
+}

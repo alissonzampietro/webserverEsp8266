@@ -24,12 +24,35 @@
 			<button id="reset" class="btn btn-danger">Resetar</button>
 		</div>
 	</div>
+
+	<!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Insira o IP do seu arduino: </h4>
+        </div>
+        <div class="modal-body">
+          <p><input type="text" id="ip"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" id="confirmaIp">Confirmar</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
 </section>
 </body>
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script>
 	var item = "";
+	var ip = "";
 	$(document).ready(function(){
+		$("#myModal").modal('show');
 		$(".circle").click(function(){
 			elemento = $(this);
 			item += elemento.attr('id');
@@ -39,7 +62,7 @@
 
 		$("#executar").click(function(){
 			if(item != ""){
-				$.get("http://192.168.0.115",{c:item});
+				$.get("http://"+ip,{c:item});
 			}
 		});
 
@@ -47,6 +70,15 @@
 			item = "";
 			$(".magic").html("");
 		});
+
+		$("#confirmaIp").click(function(){
+			ip = $("#ip").val();
+			if(ip == ""){
+				$("#ip").addClass("erro");
+			}else{
+				$("#myModal").modal('hide');
+			}
+		})
 	})
 </script>
 </html>
