@@ -1,4 +1,3 @@
-// Programa: Web Server com modulo ESP8266
 #include <SoftwareSerial.h>
  
 //RX pino 2, TX pino 3
@@ -16,7 +15,7 @@ void setup()
  
   sendData("AT+RST\r\n", 2000, DEBUG); // rst
   // Conecta a rede wireless
-  sendData("AT+CWJAP=\"tucunare\",\"t0mb0d0bainh0\"\r\n", 2000, DEBUG);
+  sendData("AT+CWJAP=\"NOME_REDE\",\"SENHA\"\r\n", 2000, DEBUG);
   delay(3000);
   sendData("AT+CWMODE=1\r\n", 1000, DEBUG);
   // Mostra o endereco IP
