@@ -101,6 +101,7 @@ String sendData(String command, const int timeout, boolean debug)
   }
   if (debug)
   {
+    //exibirá todas as informações no console
     Serial.print(response);
   }
   return response;
