@@ -1,0 +1,76 @@
+body,html{
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	background: linear-gradient(270deg, #f95a5a, #ffffff, #0f8fcc);
+background-size: 600% 600%;
+
+-webkit-animation: AnimationName 42s ease infinite;
+-moz-animation: AnimationName 42s ease infinite;
+animation: AnimationName 42s ease infinite;
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+}
+
+section.main,.container{
+	width: 50%;
+	height: 100px;
+	margin: auto;
+}
+.circle{
+	border-radius: 100%;
+	width: 80px;
+	height: 80px;
+	display: block;
+	float: left;
+	background: #ccc;
+	margin: 30px;
+	box-shadow:1px 1px 2px #666;
+	transition:500ms all;
+}
+
+.circle:hover{
+	box-shadow:1px 1px 5px #000;
+	cursor: pointer;
+}
+ul{
+	clear: both;
+	width: 100%;
+	height: 50%;
+	clear: both;
+	text-align: center;
+}
+.vermelho{
+	background: #F95A5A;
+}
+.branco{
+	background: #fff;
+}
+.azul{
+	background: #0F8FCC;
+}
+
+.magic{
+	display: block;
+	float: none;
+	width: 100%;
+	padding: 2%;
+}
+
+.btn{
+	clear:both !important;
+}

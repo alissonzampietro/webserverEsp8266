@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Blocos de Comandos</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+<section class="container">
+	<div class="row magic">
+
+	</div>
+	<div class="row">
+		<div class="col-md-6">
+			<ul>
+				<li id="8" class="circle vermelho"></li>
+				<li id="7" class="circle branco"></li>
+				<li id="6" class="circle azul"></li>
+			</ul>
+		</div>
+		<div class="col-md-6">
+			<button id="executar" class="btn btn-success">Executar Comando</button>
+			<button id="reset" class="btn btn-danger">Resetar</button>
+		</div>
+	</div>
+</section>
+</body>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script>
+	var item = "";
+	$(document).ready(function(){
+		$(".circle").click(function(){
+			elemento = $(this);
+			item += elemento.attr('id');
+			cor = elemento.attr("class").split(" ")[1];
+			$(".magic").append("<div class='circle "+cor+"'></div>");
+			console.log(item);
+		});
+
+		$("#executar").click(function(){
+			if(item != ""){
+				$.get("http://192.168.0.115",{c:item});
+			}
+		});
+
+		$("#reset").click(function(){
+			item = "";
+			$(".magic").html("");
+		});
+	})
+</script>
+</html>
