@@ -14,3 +14,16 @@ Quando fui tentar implementar pela primeira vez o módulo ESP-8266 que poderia r
 ![Demo](https://raw.githubusercontent.com/alissonzampietro/webserver_esp8266_arduino/master/arduino.jpg)
 
 * No arquivo do arduíno, não é necessário realizar nenhuma modificação. Para você saber o IP do seu ESP-8266, basta abrir o console após subir a aplicação para o seu arduíno.
+
+
+## Como enviar dados para o arduíno:
+
+Para enviar requisição para o arduíno, basta somente implementar a seguinte estrutura de código na URL: **http://IP_ESP8266_NA_SUA_REDE/?i=PORTAS_SAIDA_ARDUINO_SEM_ESPACO**.
+
+Um exemplo da estrutura acima seria por exemplo:
+
+´http://192.168.0.115/?i=76775676´
+
+No código acima o valor **i** não é modificável, pois é por ele que o algoritmo no arquivo .ino identificará os comandos. Os números que são passados **76775676** cada um representa a porta do arduíno, não é necessário espaçamento e nada para separá-los.
+
+*As portas disponíveis são de 4 a 9 temporariamente*

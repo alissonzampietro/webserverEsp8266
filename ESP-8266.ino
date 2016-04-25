@@ -15,10 +15,6 @@ void setup()
   pinMode(7,OUTPUT);
   pinMode(8,OUTPUT);
   pinMode(9,OUTPUT);
-  pinMode(10,OUTPUT);
-  pinMode(11,OUTPUT);
-  pinMode(12,OUTPUT);
-  pinMode(13,OUTPUT);
 
   sendData("AT+RST\r\n", 2000, DEBUG); // rst
   // Conecta a rede wireless
