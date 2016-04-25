@@ -63,7 +63,12 @@ ul{
 .azul{
 	background: #0F8FCC;
 }
-
+.amarelo{
+	background: #EFE909;
+}
+.verde{
+	background: #00C31A;
+}
 .magic{
 	display: block;
 	float: none;

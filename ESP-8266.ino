@@ -9,10 +9,17 @@ void setup()
   Serial.begin(9600);
   esp8266.begin(115200);
 
+  pinMode(4,OUTPUT);
+  pinMode(5,OUTPUT);
   pinMode(6,OUTPUT);
   pinMode(7,OUTPUT);
   pinMode(8,OUTPUT);
- 
+  pinMode(9,OUTPUT);
+  pinMode(10,OUTPUT);
+  pinMode(11,OUTPUT);
+  pinMode(12,OUTPUT);
+  pinMode(13,OUTPUT);
+
   sendData("AT+RST\r\n", 2000, DEBUG); // rst
   // Conecta a rede wireless
   sendData("AT+CWJAP=\"NOME_REDE\",\"SENHA\"\r\n", 2000, DEBUG);
