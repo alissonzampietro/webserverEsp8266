@@ -22,7 +22,7 @@ Para enviar requisição para o arduíno, basta somente implementar a seguinte e
 
 Um exemplo da estrutura acima seria por exemplo:
 
-´http://192.168.0.115/?i=76775676´
+`http://192.168.0.115/?i=76775676`
 
 No código acima o valor **i** não é modificável, pois é por ele que o algoritmo no arquivo .ino identificará os comandos. Os números que são passados **76775676** cada um representa a porta do arduíno, não é necessário espaçamento e nada para separá-los.
 
