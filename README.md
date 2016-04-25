@@ -11,6 +11,6 @@ Quando fui tentar implementar pela primeira vez o módulo ESP-8266 que poderia r
 * O projeto já possui um HTML, se por acaso desejar customizar as cores dos círculos exibidos, atente-se em alterar as linhas 18,19,20 do arquivo index.html, o "id" corresponde a porta de saída do arduíno, e o círculo que corresponderá a cor do led no arduino, pode ser mudado o nome da cor que está escrita em 'class="circulo cor"', as cores disponíveis são: vermelho, branco, azul, amarelo, verde.
 * O modelo do arduino é representado abaixo, está faltando somente as implementações dos jumpers, que deixei a disposição do desenvolvedor:
 
-![Demo](https://raw.githubusercontent.com/alissonzampietro/arduino_php/master/assets/imagens/layout.jpg)
+![Demo](https://raw.githubusercontent.com/alissonzampietro/webserver_esp8266_arduino/master/arduino.jpg)
 
 * No arquivo do arduíno, não é necessário realizar nenhuma modificação. Para você saber o IP do seu ESP-8266, basta abrir o console após subir a aplicação para o seu arduíno.
